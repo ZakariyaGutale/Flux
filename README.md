@@ -6,7 +6,7 @@
 <h2>Getting Started 🚀</h2>
 <ol>
     <li>Clone the repository<br>
-    <code>git clone https://github.com/yourusername/Flux.git</code></li>
+    <code>git clone https://github.com/ZakariaNu/Flux.git</code></li>
     <li>Install the dependencies<br>
     <code>npm install</code></li>
     <li>Start the development server<br>
