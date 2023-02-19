@@ -3,6 +3,7 @@
     font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+ /*  Navbar   */
 
 .navbar {
   display: flex;
@@ -35,15 +36,198 @@
     font-family: 'Articulat bold';
 }
 
+.search svg{
+   width: auto;
+   height: 100px;
+}
+
+.main{
+    margin-top: 10rem;
+}
+
+
+/* CARDS */
+
+.container {
+    margin: 40px;
+    transition: all 0.3s ease;
+}
+
+.fullcontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+    text-align: center;
+}
+
+.content h2 {
+    opacity: 0.6;
+}
+
+
+.container .card .content h2 {
+    position: relative;
+
+}
+
+.card .content h2:hover {
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+ .container:hover{
+    transform: scale(1.14);
+}
+
+.container .card .content a {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    
+}
+
+.readmore{
+    margin-bottom: 1;
+}
+
+.container .card p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
 
 
 
+.lastweeknr{
+    margin-bottom: 35px;
+}
 
+/*Featuring*/
 
+.featuringweek {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
 
+/* INPUT */
 
+.inputsearch{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.inputbox{
+    border: 3px solid #111827;
+    border-radius: 5px;
+    height: 50px;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 30%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
 
+.inputsearch button{
+    margin-left: 1rem;
+}
 
+.icon-search{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bigcardfullcontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bigcardcontainer{
+    margin: 40px;
+    transition: all 0.3s ease;
+}
+
+.bigcard{
+    position: relative;
+    width: 1700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigcardcontent{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+    text-align: center;
+}
+
+.bigcardcontainer:hover{
+    transform: scale(1.09);
+}
+
+.bigcardcontainer .bigcard .bigcardcontent a{
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+.bigcardcontainer .bigcard p {
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+}
 
 button {
     background-color: #111827;
@@ -68,3 +252,72 @@ button {
     touch-action: manipulation;
     width: auto;
 }
+
+
+/* Discover*/
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 300px;
+    white-space: nowrap;
+    transition: margin-left 0.5s;
+    margin-left: 0;
+    overflow: hidden;
+  }
+  
+  .scroll-panel {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    text-align: center;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+
+  .scroll-panel.active{
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-panel h1 {
+    margin-top: 50px;
+  }
+  
+  .scroll-panel p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  
+  .scroll-panel:not(.active) {
+    opacity: 1;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .scroll-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .scroll-button.active {
+    background-color: #111827;
+    color: #fff;
+  }
+
+  
+  
