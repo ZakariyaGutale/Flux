@@ -133,58 +133,6 @@ function Main() {
                 <div className='resultinput'></div>
             </div>
 
-            <div class="featuringweek">
-                <div class="text">
-                    <span></span>
-                    <h2>DISCOVER</h2>
-                </div>
-            </div>
-            <div class="scroll-container">
-                <div class="scroll-panel active" id="panel1">
-                    <div className='bigcardfullcontainer'>
-                <div class="bigcardcontainer">
-                    <div class="bigcard">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <div class="bigcardcontent">
-                            <h3>Movies</h3>
-                            <p>The series focuses on Monkey D. Luffy, a young man made of rubber, who, inspired by his
-                                childhood
-                                idol, the powerful pirate Red-Haired Shanks, sets off on a journey from the East Blue Sea to
-                                find the mythical treasure, the One Piece, and proclaim himself the King of the Pirates.</p>
-                            <a className='readmore' href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-                </div>
-                <div class="scroll-panel" id="panel2">
-                    <h1>Panel 2</h1>
-                    <p>This is the content of panel 2.</p>
-                </div>
-                <div class="scroll-panel" id="panel3">
-                    <h1>Panel 3</h1>
-                    <p>This is the content of panel 3.</p>
-                </div>
-                <div class="scroll-panel" id="panel4">
-                    <h1>Panel 4</h1>
-                    <p>This is the content of panel 4.</p>
-                </div>
-                <div class="scroll-panel" id="panel5">
-                    <h1>Panel 5</h1>
-                    <p>This is the content of panel 5.</p>
-                </div>
-            </div>
-            <div class="button-container">
-                <button class="scroll-button active" data-target="panel1">1</button>
-                <button class="scroll-button" data-target="panel2">2</button>
-                <button class="scroll-button" data-target="panel3">3</button>
-                <button class="scroll-button" data-target="panel4">4</button>
-                <button class="scroll-button" data-target="panel5">5</button>
-            </div>
 
 
         </div>
