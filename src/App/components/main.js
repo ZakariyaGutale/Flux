@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function Main() {
     let movieNameRef = document.getElementById("movie-name");
     let searchBtn = document.getElementById("search-btn");
