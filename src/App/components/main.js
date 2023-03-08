@@ -1,37 +1,68 @@
 import React from 'react';
 
+
+
 function Main() {
-    const panels = document.querySelectorAll('.scroll-panel');
-    const buttons = document.querySelectorAll('.scroll-button');
-    const container = document.querySelector('.scroll-container');
-    
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        buttons.forEach(button => button.classList.remove('active'));
-        // Add active class to the clicked button
-        button.classList.add('active');
-    
-        // Get the target panel
-        const targetPanel = document.getElementById(button.dataset.target);
-    
-        // Remove active class from all panels
-        panels.forEach(panel => panel.classList.remove('active'));
-    
-        // Add active class to the target panel
-        targetPanel.classList.add('active');
-    
-        // Calculate the position of the target panel
-        const targetPanelIndex = Array.from(panels).indexOf(targetPanel);
-        const targetPanelPosition = targetPanelIndex * targetPanel.offsetWidth;
-    
-        // Update the margin-left property of the container
-        container.style.marginLeft = `-${targetPanelPosition}px`;
-      });
-    });
-    
+    let movieNameRef = document.getElementById("movie-name");
+    let searchBtn = document.getElementById("search-btn");
+    let result = document.getElementById("result");
 
 
+    //hente data fra API
+
+    let getMovie = () => {
+        let movieName = movieNameRef.value;
+        let url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
+        //if input field is empty
+
+        if (movieName.length <= 0) {
+            result.innerHTML = `<h3 class="msg">Enter a Movie Name</h3>`;
+        }
+
+        //if input isn't empty
+        else {
+            fetch(url).then((resp) => resp.json()).then((data) => {
+                //if movie exist in database
+                if (data.Response == "True") {
+                    result.innerHTML = `
+                        <div class="info">
+                            <img src=${data.Poster} class="poster">
+                            <div>
+                                <h2>${data.Title}</h2>
+                                <div class="rating">
+                                    <img src="star-icon.svg">
+                                    <h4>${data.imdbRating}</h4>
+                                </div>
+                                <div class="details">
+                                    <span>${data.Rated}</span>
+                                    <span>${data.Year}</span>
+                                    <span>${data.Runtime}</span>
+                                </div>
+                                <div class="genre">
+                                    <div>${data.Genre.split(",").join("</div><div>")}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Plot:</h3>
+                        <p>${data.Plot}</p>
+                        <h3>Cast:</h3>
+                        <p>${data.Actors}</p>
+                    `;
+                }
+
+                //if movie doesn't exist in database
+                else {
+                    result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
+                }
+            })
+                //if error occurs
+                .catch(() => {
+                    result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+                });
+        }
+    };
+    searchBtn.addEventListener("click", getMovie);
+    window.addEventListener("load", getMovie);
 
 
 
@@ -126,11 +157,11 @@ function Main() {
 
                 </div>
                 <div className='inputsearch'>
-                    <input className='inputbox' type="text" placeholder='Search here ...' required />
-                    <button>Search</button>
+                    <input id="movie-name" className='inputbox' type="text" placeholder='Search here ...' required />
+                    <button id='search-btn'>Search</button>
                 </div>
 
-                <div className='resultinput'></div>
+                <div id='result'></div>
             </div>
 
 
