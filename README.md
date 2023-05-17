@@ -3,7 +3,12 @@
 <h2>Welcome to Flux 🎬🔍</h2>
 <p>Flux is a movie recommendation web app that helps users discover new films, save their favorite movies and get personalized recommendations. It's easy to use and offers features such as reviews and reminders.</p>
 
+## Project Status 🏗️
+This project is currently in Alpha. 
+
 <h2>Getting Started 🚀</h2>
+Visit the Url or clone the repository
+Flux: [Flux](https://fluxseries.web.app/)
 <ol>
     <li>Clone the repository<br>
     <code>git clone https://github.com/ZakariaNu/Flux.git</code></li>
@@ -20,14 +25,6 @@
     <li>React</li>
     <li>Firebase</li>
     <li>The Movie Database (TMDb) API</li>
-</ul>
-
-<h2>Contribution 🤝</h2>
-<p>We welcome contributions and suggestions. Feel free to submit pull requests or issues.</p>
-
-<h2>Authors 📚</h2>
-<ul>
-    <li>Zakaria Nur (https://github.com/ZakariaNu)</li>
 </ul>
 
 <h2>Enjoy! 🍿</h2>
