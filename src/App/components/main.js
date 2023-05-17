@@ -1,70 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
 
 function Main() {
-    let movieNameRef = document.getElementById("movie-name");
-    let searchBtn = document.getElementById("search-btn");
-    let result = document.getElementById("result");
+    const [movieName, setMovieName] = useState('');
+    const [result, setResult] = useState('');
 
-
-    //hente data fra API
-
-    let getMovie = () => {
-        let movieName = movieNameRef.value;
-        let url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
-        //if input field is empty
-
+    const getMovie = () => {
         if (movieName.length <= 0) {
-            result.innerHTML = `<h3 class="msg">Enter a Movie Name</h3>`;
-        }
-
-        //if input isn't empty
-        else {
-            fetch(url).then((resp) => resp.json()).then((data) => {
-                //if movie exist in database
-                if (data.Response == "True") {
-                    result.innerHTML = `
-                        <div class="info">
-                            <img src=${data.Poster} class="poster">
-                            <div>
-                                <h2>${data.Title}</h2>
-                                <div class="rating">
-                                    <img src="star-icon.svg">
-                                    <h4>${data.imdbRating}</h4>
-                                </div>
-                                <div class="details">
-                                    <span>${data.Rated}</span>
-                                    <span>${data.Year}</span>
-                                    <span>${data.Runtime}</span>
-                                </div>
-                                <div class="genre">
-                                    <div>${data.Genre.split(",").join("</div><div>")}</div>
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Plot:</h3>
-                        <p>${data.Plot}</p>
-                        <h3>Cast:</h3>
-                        <p>${data.Actors}</p>
-                    `;
-                }
-
-                //if movie doesn't exist in database
-                else {
-                    result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
-                }
-            })
-                //if error occurs
+            setResult('<h2 class="featuringweek">Enter a valid movie/series</h2>');
+        } else {
+            const url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
+            fetch(url)
+                .then((resp) => resp.json())
+                .then((data) => {
+                    if (data.Response === 'True') {
+                        setResult(
+                            `
+            <div class="bigcardcontent">
+              <div class="info">
+                <img src=${data.Poster} class="poster">
+                <div>
+                  <h2>${data.Title}</h2>
+                  <div class="rating">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="auto" height="40px" viewBox="0 0 576 512"><defs><style>.cls-1{fill:#ffb92a;}</style></defs><path class="cls-1" d="M381.2,150.3l143.7,21.2a32,32,0,0,1,17.8,54.4L438.5,328.1l24.6,146.6a32,32,0,0,1-46.6,33.6L288.1,439.8,159.8,508.3A32.22,32.22,0,0,1,126,506a31.84,31.84,0,0,1-12.8-31.3l24.6-146.6L33.58,225.9a32.15,32.15,0,0,1-7.89-32.8,31.81,31.81,0,0,1,25.73-21.6L195,150.3,259.4,18a32,32,0,0,1,57.5,0Z"/></svg>
+                    <h4>${data.imdbRating}</h4>
+                  </div>
+                  <div class="details">
+                    <span>${data.Rated}</span>
+                    <span>${data.Year}</span>
+                    <span>${data.Runtime}</span>
+                  </div>
+                  <div class="genre">
+                    <div>${data.Genre.split(',').join('</div><div>')}</div>
+                  </div>
+                </div>
+              </div>
+              <h3>Plot:</h3>
+              <p>${data.Plot}</p>
+              <h3>Cast:</h3>
+              <p>${data.Actors}</p>
+              <a href="https://www.imdb.com/find?q=${data.Title}">Read More</a>
+            </div>
+              `
+                        );
+                    } else {
+                        setResult(`<h3 class="msg">${data.Error}</h3>`);
+                    }
+                })
                 .catch(() => {
-                    result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+                    setResult(`<h3 class="msg">Error Occured</h3>`);
                 });
         }
     };
-    searchBtn.addEventListener("click", getMovie);
-    window.addEventListener("load", getMovie);
+    const getTopMovies = () => {
+        if (movieName.length <= 0) {
+            setResult('<h2 class="featuringweek">Enter a valid movie/series</h2>');
+        } else {
+            const url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
+            fetch(url)
+                .then((resp) => resp.json())
+                .then((data) => {
 
-
+                })
+                .then((data) => {
+                    if (data.Response === 'True') {
+                        setResult(
+                            `
+            <div class="bigcardcontent">
+              <div class="info">
+                <img src=${data.Poster} class="poster">
+                <div>
+                  <h2>${data.Title}</h2>
+                  <div class="rating">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="auto" height="40px" viewBox="0 0 576 512"><defs><style>.cls-1{fill:#ffb92a;}</style></defs><path class="cls-1" d="M381.2,150.3l143.7,21.2a32,32,0,0,1,17.8,54.4L438.5,328.1l24.6,146.6a32,32,0,0,1-46.6,33.6L288.1,439.8,159.8,508.3A32.22,32.22,0,0,1,126,506a31.84,31.84,0,0,1-12.8-31.3l24.6-146.6L33.58,225.9a32.15,32.15,0,0,1-7.89-32.8,31.81,31.81,0,0,1,25.73-21.6L195,150.3,259.4,18a32,32,0,0,1,57.5,0Z"/></svg>
+                    <h4>${data.imdbRating}</h4>
+                  </div>
+                  <div class="details">
+                    <span>${data.Rated}</span>
+                    <span>${data.Year}</span>
+                    <span>${data.Runtime}</span>
+                  </div>
+                  <div class="genre">
+                    <div>${data.Genre.split(',').join('</div><div>')}</div>
+                  </div>
+                </div>
+              </div>
+              <h3>Plot:</h3>
+              <p>${data.Plot}</p>
+              <h3>Cast:</h3>
+              <p>${data.Actors}</p>
+              <a href="https://www.imdb.com/find?q=${movieName}">Read More</a>
+            </div>
+              `
+                        );
+                    } else {
+                        setResult(`<h3 class="msg">${data.Error}</h3>`);
+                    }
+                })
+                .catch(() => {
+                    setResult(`<h3 class="msg">Error Occured</h3>`);
+                });
+        }
+    };
 
     return (
+
         <div>
             <div class="featuringweek">
                 <div class="text">
@@ -81,18 +122,17 @@ function Main() {
                         <span></span>
                         <div class="content">
                             <h2>01</h2>
-                            <h3>One Piece</h3>
-                            <p>The series focuses on Monkey D. Luffy, a young man made of rubber, who, inspired by his
-                                childhood
-                                idol, the powerful pirate Red-Haired Shanks, sets off on a journey from the East Blue Sea to
-                                find the mythical treasure, the One Piece, and proclaim himself the King of the Pirates.</p>
+                            <h3>Succession</h3>
+                            <p>The Roy family is known for controlling the biggest media and entertainment company in the world. However, their world changes when their father steps down from the company.</p>
                             <div class="weeknr">
                                 <p>This Week: <h2>1</h2></p>
                             </div>
                             <div class="lastweeknr">
                                 <p>Last Week: <h2>2</h2></p>
                             </div>
+                            
                             <a href="#">Read More</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -104,11 +144,8 @@ function Main() {
                         <span></span>
                         <div class="content">
                             <h2>02</h2>
-                            <h3>Spy x Family</h3>
-                            <p>The series focuses on Monkey D. Luffy, a young man made of rubber, who, inspired by his
-                                childhood
-                                idol, the powerful pirate Red-Haired Shanks, sets off on a journey from the East Blue Sea to
-                                find the mythical treasure, the One Piece, and proclaim himself the King of the Pirates.</p>
+                            <h3>Ted Lasso</h3>
+                            <p>American college football coach Ted Lasso heads to London to manage AFC Richmond, a struggling English Premier League football team</p>
                             <div class="weeknr">
                                 <p>This Week:<h2>2</h2></p>
                                 <div class="lastweeknr">
@@ -129,11 +166,8 @@ function Main() {
                         <span></span>
                         <div class="content">
                             <h2>03</h2>
-                            <h3>Blue Lock</h3>
-                            <p>The series focuses on Monkey D. Luffy, a young man made of rubber, who, inspired by his
-                                childhood
-                                idol, the powerful pirate Red-Haired Shanks, sets off on a journey from the East Blue Sea to
-                                find the mythical treasure, the One Piece, and proclaim himself the King of the Pirates.</p>
+                            <h3>The Rookie</h3>
+                            <p>Starting over isn't easy, especially for John Nolan who, after a life-altering incident, is pursuing his dream of joining the LAPD. As their oldest rookie, he's met with skepticism from those who see him as just a walking midlife ...</p>
                             <div class="weeknr">
                                 <p>This Week:<h2>3</h2></p>
                             </div>
@@ -155,15 +189,28 @@ function Main() {
 
                 </div>
                 <div className='inputsearch'>
-                    <input id="movie-name" className='inputbox' type="text" placeholder='Search here ...' required />
-                    <button id='search-btn'>Search</button>
+                    <input id="movie-name" className='inputbox' type="text" onChange={(e) => setMovieName(e.target.value)} placeholder='Search here ...' required />
+                    <button id="search-btn" onClick={getMovie}>
+                        Search
+                    </button>
                 </div>
-
-                <div id='result'></div>
             </div>
 
 
+            <div class="bigcardfullcontainer">
+                <div className='bigcardcontainer'>
+                    <div class="bigcard">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div id="result" dangerouslySetInnerHTML={{ __html: result }}></div>
+                    </div>
+                </div>
 
+                
+
+            </div>
         </div>
     );
 }
