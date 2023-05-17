@@ -8,7 +8,7 @@ This project is currently in Alpha.
 
 <h2>Getting Started 🚀</h2>
 Visit the Url or clone the repository
-Flux: [Flux](https://fluxseries.web.app/)
+Flux: https://fluxseries.web.app/
 <ol>
     <li>Clone the repository<br>
     <code>git clone https://github.com/ZakariaNu/Flux.git</code></li>
