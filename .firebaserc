@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "flux-f455c"
-  }
+  },
+  "targets": {
+    "flux-f455c": {
+      "hosting": {
+        "fluxseries": [
+          "fluxseries"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

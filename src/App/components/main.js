@@ -74,7 +74,7 @@ function Main() {
             <div class="featuringweek">
                 <div class="text">
                     <span></span>
-                    <h2>THIS WEEKS TOP WATCH</h2>
+                    <h2>THIS WEEKS TOP WATCH funker yes</h2>
                 </div>
             </div>
             <div class="fullcontainer">
