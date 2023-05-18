@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 
+/*
+import { initializeApp } from "firebase/app";
 
+const firebaseConfig = {
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  };
+  
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+*/
 function Main() {
     const [movieName, setMovieName] = useState('');
     const [result, setResult] = useState('');
@@ -59,7 +76,7 @@ function Main() {
             <div class="featuringweek">
                 <div class="text">
                     <span></span>
-                    <h2>THIS WEEKS TOP WATCH funker yes</h2>
+                    <h2>THIS WEEKS TOP WATCH</h2>
                 </div>
             </div>
             <div class="fullcontainer">
