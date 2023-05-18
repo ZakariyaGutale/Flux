@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 
+import { initializeApp } from "firebase/app";
+
+
+
 
 function Main() {
     const [movieName, setMovieName] = useState('');
@@ -10,7 +14,7 @@ function Main() {
         if (movieName.length <= 0) {
             setResult('<h2 class="featuringweek">Enter a valid movie/series</h2>');
         } else {
-            const url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
+            const url = `https://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
             fetch(url)
                 .then((resp) => resp.json())
                 .then((data) => {
@@ -53,57 +57,7 @@ function Main() {
                 });
         }
     };
-    const getTopMovies = () => {
-        if (movieName.length <= 0) {
-            setResult('<h2 class="featuringweek">Enter a valid movie/series</h2>');
-        } else {
-            const url = `http://www.omdbapi.com/?t=${movieName}&apikey=f03d0b7`;
-            fetch(url)
-                .then((resp) => resp.json())
-                .then((data) => {
-
-                })
-                .then((data) => {
-                    if (data.Response === 'True') {
-                        setResult(
-                            `
-            <div class="bigcardcontent">
-              <div class="info">
-                <img src=${data.Poster} class="poster">
-                <div>
-                  <h2>${data.Title}</h2>
-                  <div class="rating">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="auto" height="40px" viewBox="0 0 576 512"><defs><style>.cls-1{fill:#ffb92a;}</style></defs><path class="cls-1" d="M381.2,150.3l143.7,21.2a32,32,0,0,1,17.8,54.4L438.5,328.1l24.6,146.6a32,32,0,0,1-46.6,33.6L288.1,439.8,159.8,508.3A32.22,32.22,0,0,1,126,506a31.84,31.84,0,0,1-12.8-31.3l24.6-146.6L33.58,225.9a32.15,32.15,0,0,1-7.89-32.8,31.81,31.81,0,0,1,25.73-21.6L195,150.3,259.4,18a32,32,0,0,1,57.5,0Z"/></svg>
-                    <h4>${data.imdbRating}</h4>
-                  </div>
-                  <div class="details">
-                    <span>${data.Rated}</span>
-                    <span>${data.Year}</span>
-                    <span>${data.Runtime}</span>
-                  </div>
-                  <div class="genre">
-                    <div>${data.Genre.split(',').join('</div><div>')}</div>
-                  </div>
-                </div>
-              </div>
-              <h3>Plot:</h3>
-              <p>${data.Plot}</p>
-              <h3>Cast:</h3>
-              <p>${data.Actors}</p>
-              <a href="https://www.imdb.com/find?q=${movieName}">Read More</a>
-            </div>
-              `
-                        );
-                    } else {
-                        setResult(`<h3 class="msg">${data.Error}</h3>`);
-                    }
-                })
-                .catch(() => {
-                    setResult(`<h3 class="msg">Error Occured</h3>`);
-                });
-        }
-    };
-
+    
     return (
 
         <div>
@@ -123,7 +77,7 @@ function Main() {
                         <div class="content">
                             <h2>01</h2>
                             <h3>Succession</h3>
-                            <p>The Roy family is known for controlling the biggest media and entertainment company in the world. However, their world changes when their father steps down from the company.</p>
+                            <p>The Roy family is known for controlling the biggest media and entertainment company in the world. However, it all changes when the father steps down.</p>
                             <div class="weeknr">
                                 <p>This Week: <h2>1</h2></p>
                             </div>
@@ -131,7 +85,7 @@ function Main() {
                                 <p>Last Week: <h2>2</h2></p>
                             </div>
                             
-                            <a href="#">Read More</a>
+                            <a href="https://www.imdb.com/title/tt7660850/?ref_=fn_al_tt_1">Read More</a>
                             
                         </div>
                     </div>
@@ -153,7 +107,7 @@ function Main() {
                                 </div>
                             </div>
 
-                            <a href="#">Read More</a>
+                            <a href="https://www.imdb.com/title/tt10986410/?ref_=fn_al_tt_1">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -167,14 +121,14 @@ function Main() {
                         <div class="content">
                             <h2>03</h2>
                             <h3>The Rookie</h3>
-                            <p>Starting over isn't easy, especially for John Nolan who, after a life-altering incident, is pursuing his dream of joining the LAPD. As their oldest rookie, he's met with skepticism from those who see him as just a walking midlife ...</p>
+                            <p>Starting over isn't easy, especially for John Nolan who, after a life-altering incident, is pursuing his dream of joining the LAPD. As their oldest rookie.</p>
                             <div class="weeknr">
                                 <p>This Week:<h2>3</h2></p>
                             </div>
                             <div class="lastweeknr">
                                 <p>Last Week: <h2>3</h2></p>
                             </div>
-                            <a className='readmore' href="#">Read More</a>
+                            <a className='readmore' href="https://www.imdb.com/title/tt7587890/?ref_=fn_al_tt_1">Read More</a>
                         </div>
                     </div>
                 </div>
