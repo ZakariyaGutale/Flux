@@ -1,21 +1,6 @@
 import React, { useState } from 'react';
 
 
-import { initializeApp } from "firebase/app";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDLHu6xVx76EFUTeYNPJqBIOYqD8pSHZiM",
-  authDomain: "flux-f455c.firebaseapp.com",
-  projectId: "flux-f455c",
-  storageBucket: "flux-f455c.appspot.com",
-  messagingSenderId: "93231493877",
-  appId: "1:93231493877:web:3bdc86ad891555883d0bbc",
-  measurementId: "G-GLZ256HXV4"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
 function Main() {
     const [movieName, setMovieName] = useState('');
     const [result, setResult] = useState('');

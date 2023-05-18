@@ -3,15 +3,15 @@ import React from 'react';
 function Footer() {
   return (
     <div>
-      <div class="footer-basic">
+      <div className="footer-basic">
         <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-github"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux">About</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <div className="social"><a href="!#"><i className="icon ion-social-github"></i></a><a href="!#"><i className="icon ion-social-twitter"></i></a></div>
+            <ul className="list-inline">
+                <li className="list-inline-item"><a href="!#">Home</a></li>
+                <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux">About</a></li>
+                <li className="list-inline-item"><a href="!#">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">Flux © 2023</p>
+            <p className="copyright">Flux © 2023</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

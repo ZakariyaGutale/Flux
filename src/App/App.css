@@ -11,7 +11,7 @@
   margin: 0 auto;
   width: 95%;
   list-style: none;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .end{
