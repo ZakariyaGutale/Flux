@@ -272,13 +272,21 @@ button {
   .rating{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 0.6em;
     margin: 0.6em 0 0.9em 0;
 }
 
 .rating img{
     width: 1.23em;
+}
+
+#Layer_1{
+    margin-right: -3rem;
+}
+
+#Layer_2{
+    margin-right: 3rem;
 }
 .rating svg{
     margin-left: 1rem;
@@ -288,7 +296,7 @@ button {
     display: inline-block;
     font-size: 1.1em;
     font-weight: 500;
-    margin-right: 10rem;
+    margin-right: 100px;
 }
 .bigcardfullcontainer{
     display: flex;
