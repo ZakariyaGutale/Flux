@@ -1,4 +1,4 @@
-<h1 style="text-align:center;"><img src="src/App/svg/fluxlogo.svg" alt="Flux Logo" width="auto" height="300px" fill="#4C4C6D"><img src="src/App/svg/Animation1.gif" width="auto" height="150px"></h1>
+<h1 style="text-align:center;"><img src="src/App/svg/fluxlogo.svg" alt="Flux Logo" width="auto" height="300px" fill="#4C4C6D"><img src="src/App/svg/Animation1.gif" width="auto" height="250px"></h1>
 
 <h2>Welcome to Flux</h2>
 <p>Flux is a movie recommendation web app that helps users discover new films, save their favorite movies and get personalized recommendations. It's easy to use and offers features such as reviews and reminders.</p>
