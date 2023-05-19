@@ -22,13 +22,18 @@ html {
   margin-right: 10%;
 }
 
-.navbar svg {
+#logo {
   position: absolute;
   top: 0;
   left: 0;
   width: auto;
   height: 200px;
   margin-left: 10%;
+}
+
+#search-logo-1{
+  width: auto;
+  height: 45px;
 }
 
 .nav-item-1 button {
@@ -43,12 +48,13 @@ html {
   color: #111827;
 }
 
+
 .navbar-item {
   margin-right: 40px;
   margin-top: 2rem;
 }
 
-.search svg {
+#search-logo {
   width: auto;
   height: 100px;
 }
@@ -68,6 +74,18 @@ html {
   font-size: 16px;
 }
 
+.navbar-item button:hover{
+  color: #00DD00;
+  transition: 0.2s ease;
+}
+
+.navbar-item svg:hover{
+  color: #00DD00;
+  transition: 0.2s ease;
+}
+
+
+
 
 /* CARDS */
 
@@ -81,7 +99,7 @@ html {
 .fullcontainer {
   display: flex;
   flex: nowrap;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .card-container {

@@ -70,10 +70,16 @@ function Main() {
               <p>${data.Plot}</p>
               <h3>Cast:</h3>
               <p>${data.Actors}</p>
-              <button><a href="https://www.imdb.com/find?q=${data.Title}" target="_blank" rel="noopener noreferrer" ></a>Read More</button>
+              <a href="https://www.imdb.com/find?q=${data.Title}" target="_blank" rel="noopener noreferrer"><button><span>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" width="auto" height="35px" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+            </span></button></a>
             </div>
 
-              `
+            <div classname="viewmore">
+            
+            </div
+            `
                         );
                     } else {
                         setResult(`<h3 class="msg">${data.Error}</h3>`);
@@ -165,17 +171,10 @@ function Main() {
                     </div>
                 </div>
             </div>
-
-            <div class="Searchinfo">
-                <div class="text">
-                    <span></span>
-                    <h2>THIS MONTH TOP WATCH</h2>
-                </div>
-            </div>
-
+            <div id="search-bar"></div>
             <div className='search'>
                 <div className='icon-search'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <svg id="search-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
 
