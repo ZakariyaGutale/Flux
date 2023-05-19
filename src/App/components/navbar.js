@@ -15,18 +15,24 @@ function Navbar() {
         </li>
         <div className='end'>
           <li className='navbar-item'>
+            <div className='nav-item-1'>
             <a href='https://github.com/ZakariyaGutale/flux' target="_blank" rel="noopener noreferrer">
               <button>About</button>
             </a>
+            </div>
           </li>
           <li className='navbar-item'>
+          <div className='nav-item-2'>
             <a href='https://github.com/ZakariyaGutale/flux' target="_blank" rel="noopener noreferrer">
               <button>Documentation</button>
             </a>
+            </div>
           </li>
+          <div className='login-button'>
           <li className='navbar-item' target="_blank" rel="noopener noreferrer">
-            <button>Login (Coming soon)</button>
+            <button><span>Login</span></button>
           </li>
+          </div>
         </div>
       </div>
     </>
