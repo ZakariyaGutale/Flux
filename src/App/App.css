@@ -4,7 +4,7 @@
 }
 
 html{
-    background-color: #e3e3e3;
+    background-color: #e3dddc;
 }
 
  /*  Navbar   */
@@ -55,16 +55,24 @@ html{
 .container {
     margin: 40px;
     transition: all 0.3s ease;
+    display: flex;
+
 }
 
 .fullcontainer {
     display: flex;
-    justify-content: center;
+    flex: nowrap;
     margin-top: 6rem;
 }
 
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-right: 25rem;
+}
 .card {
-    position: relative;
+    position:inherit;
     width: 300px;
     height: 400px;
     display: flex;
@@ -76,7 +84,15 @@ html{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 30px;
     text-align: center;
+    border-radius: 15px
 }
+
+.card :hover{
+    background-color: #d4cecd;
+    border-radius: 15px;
+}
+
+
 
 .content h2 {
     opacity: 0.6;
@@ -268,7 +284,6 @@ button {
   }
 
   
-  
 
   /* MSG JSON */
 
@@ -421,21 +436,35 @@ button {
   }
 
   /* ICONS movies*/
-  .content svg{
+  #succession{
     width: auto;
     height: 20px;
+    border-radius: 0;
   }
 
 #last_of_us{
     width: auto;
     height: 36px;
+    border-radius: 0;
 }
 
 #ted_lasso{
     width: auto;
     height: 30px;
+    border-radius: 0;
 }
 
-
-
-  
+.leaderboard-container{
+    flex: 0 0 auto;
+    margin-left: 10rem;
+}
+.leaderboard{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 30px 0px;
+    padding: 60px;
+    border-radius: 15px;  
+}
+.leaderboard-header, .leaderboard-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Optional - creates a gap between the h2/SVG and h4/SVG */
+}
