@@ -15,16 +15,16 @@ function Navbar() {
         </li>
         <div className='end'>
           <li className='navbar-item'>
-            <a href='https://github.com/ZakariyaGutale/flux'>
+            <a href='https://github.com/ZakariyaGutale/flux' target="_blank" rel="noopener noreferrer">
               <button>About</button>
             </a>
           </li>
           <li className='navbar-item'>
-            <a href='https://github.com/ZakariyaGutale/flux'>
+            <a href='https://github.com/ZakariyaGutale/flux' target="_blank" rel="noopener noreferrer">
               <button>Documentation</button>
             </a>
           </li>
-          <li className='navbar-item'>
+          <li className='navbar-item' target="_blank" rel="noopener noreferrer">
             <button>Login (Coming soon)</button>
           </li>
         </div>

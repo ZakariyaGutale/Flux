@@ -132,7 +132,6 @@ function Footer() {
                 </div>
               </div>
                */
-
               
     <div>
       <div className='footer-wrapper'>
@@ -201,15 +200,15 @@ function Footer() {
               <div className='help-container'>
                 <div className='help-content'>
                   <h2>Didn't find what you're looking for?</h2>
-                  <p>Please read the <a href="https://github.com/ZakariyaGutale/flux">documentation</a> for more information.</p>
+                  <p>Please read the <a href="https://github.com/ZakariyaGutale/flux"  target="_blank" rel="noopener noreferrer" >documentation</a> for more information.</p>
                 </div>
               </div>
             </div>
             <div className='social-footer'>
-                <div className="social"><a href="https://github.com/ZakariyaGutale/flux"><i className="icon ion-social-github"></i></a><a href="!#"><i className="icon ion-social-twitter"></i></a></div>
+                <div className="social"><a href="https://github.com/ZakariyaGutale/flux" target="_blank" rel="noopener noreferrer" ><i className="icon ion-social-github"></i></a><a href="!#"><i className="icon ion-social-twitter"></i></a></div>
                 <ul className="list-inline">
                   <li className="list-inline-item"><a href="!#">Home</a></li>
-                  <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux">About</a></li>
+                  <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux" target="_blank" rel="noopener noreferrer">About</a></li>
                   <li className="list-inline-item"><a href="!#">Privacy Policy</a></li>
                 </ul>
               </div>

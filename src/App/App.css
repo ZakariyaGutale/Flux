@@ -176,6 +176,11 @@ html{
     padding: 0 6px;
     padding-left: 12px;
 }
+.inputsearch form {
+  display: flex;
+  width: 130%;
+  justify-content: center;
+}
 
 .inputsearch button{
     margin-left: 1rem;
@@ -336,6 +341,7 @@ button {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 40px;
     text-align: center;
+    border-radius: 15px; 
 }
 
 .bigcardcontainer:hover{

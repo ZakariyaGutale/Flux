@@ -24,7 +24,8 @@ function Main() {
     const [movieName, setMovieName] = useState('');
     const [result, setResult] = useState('');
 
-    const getMovie = () => {
+    const getMovie = (e) => {
+        e.preventDefault();
         if (movieName.length <= 0) {
             setResult('<h2 class="featuringweek">Enter a valid movie/series</h2>');
         } else {
@@ -58,7 +59,7 @@ function Main() {
               <p>${data.Plot}</p>
               <h3>Cast:</h3>
               <p>${data.Actors}</p>
-              <a href="https://www.imdb.com/find?q=${data.Title}">Read More</a>
+              <a href="https://www.imdb.com/find?q=${data.Title}" target="_blank" rel="noopener noreferrer" >Read More</a>
             </div>
               `
                         );
@@ -103,7 +104,7 @@ function Main() {
                                     <p>Last Week: <h2>2</h2></p>
                                 </div>
 
-                                <a href="https://www.imdb.com/title/tt7660850/?ref_=fn_al_tt_1">Read More</a>
+                                <a href="https://www.imdb.com/title/tt7660850/?ref_=fn_al_tt_1" target="_blank" rel="noopener noreferrer">Read More</a>
 
                             </div>
                         </div>
@@ -125,7 +126,7 @@ function Main() {
                                     </div>
                                 </div>
 
-                                <a href="https://www.imdb.com/title/tt10986410/?ref_=fn_al_tt_1">Read More</a>
+                                <a href="https://www.imdb.com/title/tt10986410/?ref_=fn_al_tt_1" target="_blank" rel="noopener noreferrer">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -146,7 +147,7 @@ function Main() {
                                 <div class="lastweeknr">
                                     <p>Last Week: <h2>3</h2></p>
                                 </div>
-                                <a className='readmore' href="https://www.imdb.com/title/tt3581920/">Read More</a>
+                                <a className='readmore' href="https://www.imdb.com/title/tt3581920/" target="_blank" rel="noopener noreferrer">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -161,12 +162,17 @@ function Main() {
                     </svg>
 
                 </div>
+
                 <div className='inputsearch'>
-                    <input id="movie-name" className='inputbox' type="text" onChange={(e) => setMovieName(e.target.value)} placeholder='Search here ...' required />
-                    <button id="search-btn" onClick={getMovie}>
-                        Search
-                    </button>
+                    <form onSubmit={getMovie}>
+                        <input id="movie-name" className='inputbox' type="text" onChange={(e) => setMovieName(e.target.value)} placeholder='Search here ...' required />
+                        <button id="search-btn" type="submit">
+                            Search
+                        </button>
+                    </form>
                 </div>
+
+
             </div>
 
 
