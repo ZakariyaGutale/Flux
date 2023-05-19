@@ -66,15 +66,6 @@ function Footer() {
                 </div>
               </div>
 
-              <div className='social-footer'>
-                <div className="social"><a href="https://github.com/ZakariyaGutale/flux"><i className="icon ion-social-github"></i></a><a href="!#"><i className="icon ion-social-twitter"></i></a></div>
-                <ul className="list-inline">
-                  <li className="list-inline-item"><a href="!#">Home</a></li>
-                  <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux">About</a></li>
-                  <li className="list-inline-item"><a href="!#">Privacy Policy</a></li>
-                </ul>
-              </div>
-
               <div className='help-container'>
                 <div className='help-content'>
                   <h2>Didn't find what you're looking for?</h2>
@@ -82,6 +73,14 @@ function Footer() {
                 </div>
               </div>
             </div>
+            <div className='social-footer'>
+                <div className="social"><a href="https://github.com/ZakariyaGutale/flux"><i className="icon ion-social-github"></i></a><a href="!#"><i className="icon ion-social-twitter"></i></a></div>
+                <ul className="list-inline">
+                  <li className="list-inline-item"><a href="!#">Home</a></li>
+                  <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux">About</a></li>
+                  <li className="list-inline-item"><a href="!#">Privacy Policy</a></li>
+                </ul>
+              </div>
             <p className="copyright">Flux © 2023</p>
           </footer>
         </div>
