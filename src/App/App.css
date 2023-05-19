@@ -1,7 +1,10 @@
 * {
-    background-color: #e3dddc;
     font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     scroll-behavior: smooth;
+}
+
+html{
+    background-color: #e3e3e3;
 }
 
  /*  Navbar   */
@@ -416,14 +419,22 @@ button {
     display: inline;
   justify-content: space-between;
   }
-  
 
+  /* ICONS movies*/
+  .content svg{
+    width: auto;
+    height: 20px;
+  }
 
+#last_of_us{
+    width: auto;
+    height: 36px;
+}
 
-
-
-
-
+#ted_lasso{
+    width: auto;
+    height: 30px;
+}
 
 
 
