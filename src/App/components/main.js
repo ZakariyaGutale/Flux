@@ -34,6 +34,7 @@ function Main() {
                 .then((resp) => resp.json())
                 .then((data) => {
                     if (data.Response === 'True') {
+                        
                         setResult(
                             `
         <div class="bigcardcontainers">
@@ -76,9 +77,6 @@ function Main() {
             </span></button></a>
             </div>
 
-            <div classname="viewmore">
-            
-            </div
             `
                         );
                     } else {

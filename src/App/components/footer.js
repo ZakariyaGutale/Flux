@@ -210,6 +210,7 @@ function Footer() {
                   <li className="list-inline-item"><a href="!#">Home</a></li>
                   <li className="list-inline-item"><a href="https://github.com/ZakariyaGutale/flux" target="_blank" rel="noopener noreferrer">About</a></li>
                   <li className="list-inline-item"><a href="!#">Privacy Policy</a></li>
+                  <li className="list-inline-item"><a href="https://www.omdbapi.com/" target="_blank" rel="noopener noreferrer">OMDB API</a></li>
                 </ul>
               </div>
             <p className="copyright">Flux © 2023</p>
